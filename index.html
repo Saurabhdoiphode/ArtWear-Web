@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ArtWear | Customize Your Clothes</title>
+  <meta name="description" content="ArtWear - Modern clothing customization platform. Design and personalize T-shirts easily." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-TUu/VnYQWwTaX4JtTXX+xA3y6rjYQ1f+TnHj7FVGHvXZHzVvzJeYfijYwGvVxvH3iY8Myu7E2dKNXHgZm6Zz0w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+  <!-- Loading Overlay -->
+  <div id="loader" class="loader-overlay"><div class="spinner"></div></div>
+  <header class="site-header">
+    <div class="logo"><i class="fa-solid fa-shirt"></i><span><span class="art-text">Art</span><span class="wear-text">Wear</span></span></div>
+    <nav class="main-nav" aria-label="Primary">
+      <button class="nav-toggle" aria-label="Toggle navigation"><span class="bar"></span><span class="bar"></span><span class="bar"></span></button>
+      <ul class="nav-links">
+        <li><a href="index.html#home" class="active">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="team.html">Our Team</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="auth-actions">
+      <button class="btn outline small" id="signInBtn">Sign In</button>
+      <button class="btn primary small" id="registerBtn">Register</button>
+    </div>
+  </header>
+
+  <!-- HERO SECTION -->
+  <section id="home" class="hero reveal">
+    <div class="hero-grid">
+      <div class="hero-content reveal">
+        <h1 class="hero-title"><span class="art-text">Art</span><span class="wear-text">Wear</span></h1>
+        <p class="hero-sub">ArtWear is your creative studio for custom apparel—design unique T‑shirts with AI‑assisted layouts, sustainable materials, and a real‑time 360° preview so every piece you wear tells your story.</p>
+        <div class="hero-actions">
+          <a href="#app-flow" class="btn primary large">View App</a>
+          <a href="about.html" class="btn outline large">Learn More</a>
+        </div>
+      </div>
+      <div class="hero-visual reveal">
+        <div class="tshirt-wrapper">
+          <div class="tshirt-3d" id="tshirt3dImage">
+            <img src="assets/img/tshirt.png" alt="Custom T-shirt" class="shirt-image" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MAIN CONTENT SECTION 1 -->
+  <section class="banner centered reveal">
+    <div class="container">
+    <h2>Customize Your Clothes Now</h2>
+    <p class="sub">Quick and Easy Customize</p>
+    </div>
+  </section>
+
+  <!-- APP FLOW SECTION -->
+  <section id="app-flow" class="app-flow reveal">
+    <div class="container">
+    <h2 class="section-title">How We Work</h2>
+    <div class="flow-steps">
+      <div class="step reveal">
+        <div class="step-thumb"><img src="assets/img/step-ideate.svg" alt="Ideate step"></div>
+        <h3>Ideate</h3>
+        <p>Choose styles & colors that resonate with your creativity.</p>
+      </div>
+      <div class="step reveal">
+        <div class="step-thumb"><img src="assets/img/step-design.svg" alt="Design step"></div>
+        <h3>Design</h3>
+        <p>Apply patterns, artwork & text with our intuitive editor.</p>
+      </div>
+      <div class="step reveal">
+        <div class="step-thumb"><img src="assets/img/step-preview.svg" alt="Preview step"></div>
+        <h3>Preview 360°</h3>
+        <p>Spin & examine every angle before finalizing.</p>
+      </div>
+      <div class="step reveal">
+        <div class="step-thumb"><img src="assets/img/step-produce.svg" alt="Produce step"></div>
+        <h3>Produce</h3>
+        <p>We craft and ship your personalized apparel globally.</p>
+      </div>
+    </div>
+    </div>
+  </section>
+
+  <!-- QUOTE SECTION -->
+  <section class="quote reveal">
+    <div class="container">
+      <blockquote>"Fashion is the art, and you are the canvas."</blockquote>
+    </div>
+  </section>
+
+  <!-- THREE T-SHIRT IMAGES -->
+  <section class="triple-gallery reveal">
+    <div class="container">
+    <h2 class="section-title">Explore Styles</h2>
+    <div class="gallery-row explore-styles">
+      <div class="style-card reveal">
+        <div class="style-thumb"><img src="assets/img/style-minimalist.svg" alt="Minimalist style"></div>
+        <h3>Minimalist</h3>
+        <p>Crisp spacing, restrained color accents and clean lines for timeless versatility.</p>
+      </div>
+      <div class="style-card reveal">
+        <div class="style-thumb"><img src="assets/img/style-gradient.svg" alt="Gradient style"></div>
+        <h3>Gradient</h3>
+        <p>Smooth multi‑tone fades that add modern depth and subtle motion illusion.</p>
+      </div>
+      <div class="style-card reveal">
+        <div class="style-thumb"><img src="assets/img/style-patterned.svg" alt="Patterned style"></div>
+        <h3>Patterned</h3>
+        <p>Repeating geometric motifs, layered line work and dual‑color symmetry.</p>
+      </div>
+      <div class="style-card reveal">
+        <div class="style-thumb"><img src="assets/img/style-abstract.svg" alt="Abstract style"></div>
+        <h3>Abstract</h3>
+        <p>Experimental shapes & overlapping forms for bold, art‑driven statement pieces.</p>
+      </div>
+    </div>
+    </div>
+  </section>
+
+  <!-- DETAILED INFO SECTION -->
+  <section class="detail-info reveal">
+    <div class="container">
+      <div class="detail-wrapper reveal">
+        <div class="detail-showcase">
+          <div class="detail-shot"><img src="assets/img/detail-eco.svg" alt="Eco materials"></div>
+          <div class="detail-shot"><img src="assets/img/detail-ai.svg" alt="AI layout engine"></div>
+          <div class="detail-shot"><img src="assets/img/detail-global.svg" alt="Global fulfillment"></div>
+        </div>
+        <h2>Detailed Information About Service</h2>
+        <p>ArtWear streamlines apparel customization with an immersive 360° preview engine, smart color harmonies, and AI suggestions for layouts. We prioritize sustainable materials and efficient production pipelines—ensuring your designs look great and feel responsible.</p>
+        <ul class="features-list">
+          <li><i class="fa-solid fa-check"></i>Sustainable fabrics & inks</li>
+          <li><i class="fa-solid fa-check"></i>Real-time 360° viewer</li>
+          <li><i class="fa-solid fa-check"></i>AI layout recommendations</li>
+          <li><i class="fa-solid fa-check"></i>Global fast shipping</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURED STYLES SECTION (like popular cars) -->
+  <section class="featured reveal">
+    <div class="container">
+      <h2 class="section-title">Featured Custom Styles</h2>
+      <div class="featured-grid">
+        <div class="featured-card reveal">
+          <span class="badge">TRENDING</span>
+          <h3>Neon Edge Tee</h3>
+          <p>Electric gradients & luminous ink effects.</p>
+        </div>
+        <div class="featured-card reveal">
+          <span class="badge">LIMITED</span>
+          <h3>Eco Minimal</h3>
+          <p>Organic cotton & subtle linework art.</p>
+        </div>
+        <div class="featured-card reveal">
+          <span class="badge">POPULAR</span>
+          <h3>Street Pattern</h3>
+          <p>Urban motifs with layered texture overlays.</p>
+        </div>
+        <div class="featured-card reveal">
+          <span class="badge">NEW</span>
+          <h3>Chromatic Pulse</h3>
+          <p>Pulsing color bands & dynamic geometric forms.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY CHOOSE SECTION -->
+  <section class="why reveal">
+    <div class="container">
+      <h2 class="section-title">Why Choose ArtWear</h2>
+      <div class="why-content">
+        <div class="why-text reveal">
+          <p>We fuse creativity tooling, sustainable sourcing, and rapid fulfillment into one cohesive experience. ArtWear lets you iterate confidently and wear ideas faster than traditional custom print shops.</p>
+        </div>
+        <ul class="why-points">
+          <li class="reveal"><i class="fa-solid fa-seedling"></i><div><strong>Eco Materials</strong><span>Certified organic fabrics & water-based inks.</span></div></li>
+          <li class="reveal"><i class="fa-solid fa-wand-magic-sparkles"></i><div><strong>Smart Suggestions</strong><span>AI assists with layout balance & palette harmony.</span></div></li>
+          <li class="reveal"><i class="fa-solid fa-globe"></i><div><strong>Global Fulfillment</strong><span>Nearest responsible facility reduces carbon footprint.</span></div></li>
+          <li class="reveal"><i class="fa-solid fa-gauge-high"></i><div><strong>Fast Iteration</strong><span>Real-time 360° preview—no waiting for proofs.</span></div></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- FAQ SECTION -->
+  <section class="faq reveal">
+    <div class="container">
+      <h2 class="section-title">FAQ</h2>
+      <div class="accordion" id="faqAccordion">
+        <div class="acc-item reveal">
+          <div class="acc-header"><span>How long does production take?</span><i class="fa-solid fa-chevron-down"></i></div>
+          <div class="acc-content"><p>Typical single-item orders ship in 3–5 business days; bulk in 7–10.</p></div>
+        </div>
+        <div class="acc-item reveal">
+          <div class="acc-header"><span>Can I upload my own artwork?</span><i class="fa-solid fa-chevron-down"></i></div>
+          <div class="acc-content"><p>Yes—PNG/SVG uploads supported, with auto scaling & contrast checks.</p></div>
+        </div>
+        <div class="acc-item reveal">
+          <div class="acc-header"><span>Do you offer bulk discounts?</span><i class="fa-solid fa-chevron-down"></i></div>
+          <div class="acc-content"><p>Volume pricing tiers apply automatically at checkout for 15+ items.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DOWNLOAD APP SECTION -->
+  <section class="download-app reveal">
+    <div class="container">
+      <div class="app-grid">
+        <div class="app-content reveal">
+          <h2>Download our app to get most out of it</h2>
+          <p class="app-desc">Experience seamless design workflows, instant previews, and exclusive mobile-only features. Create stunning custom apparel right from your pocket—anytime, anywhere.</p>
+          <div class="store-buttons">
+            <a href="#" class="store-badge play" aria-label="Get it on Play Store">
+              <svg viewBox="0 0 24 24" class="store-icon"><path fill="currentColor" d="M3,20.5V3.5C3,2.91 3.34,2.39 3.84,2.15L13.69,12L3.84,21.85C3.34,21.61 3,21.09 3,20.5M16.81,15.12L6.05,21.34L14.54,12.85L16.81,15.12M20.16,10.81C20.5,11.08 20.75,11.5 20.75,12C20.75,12.5 20.53,12.9 20.18,13.18L17.89,14.5L15.39,12L17.89,9.5L20.16,10.81M6.05,2.66L16.81,8.88L14.54,11.15L6.05,2.66Z"/></svg>
+              <div><small>GET IT ON</small><strong>Google Play</strong></div>
+            </a>
+            <a href="#" class="store-badge apple" aria-label="Download on App Store">
+              <svg viewBox="0 0 24 24" class="store-icon"><path fill="currentColor" d="M18.71,19.5C17.88,20.74 17,21.95 15.66,21.97C14.32,22 13.89,21.18 12.37,21.18C10.84,21.18 10.37,21.95 9.1,22C7.79,22.05 6.8,20.68 5.96,19.47C4.25,17 2.94,12.45 4.7,9.39C5.57,7.87 7.13,6.91 8.82,6.88C10.1,6.86 11.32,7.75 12.11,7.75C12.89,7.75 14.37,6.68 15.92,6.84C16.57,6.87 18.39,7.1 19.56,8.82C19.47,8.88 17.39,10.1 17.41,12.63C17.44,15.65 20.06,16.66 20.09,16.67C20.06,16.74 19.67,18.11 18.71,19.5M13,3.5C13.73,2.67 14.94,2.04 15.94,2C16.07,3.17 15.6,4.35 14.9,5.19C14.21,6.04 13.07,6.7 11.95,6.61C11.8,5.46 12.36,4.26 13,3.5Z"/></svg>
+              <div><small>Download on the</small><strong>App Store</strong></div>
+            </a>
+          </div>
+        </div>
+        <div class="app-visual reveal">
+          <div class="phone-mockup">
+            <img src="assets/img/app-mockup.svg" alt="ArtWear mobile app interface">
+          </div>
+          <div class="decorative-arc"></div>
+          <div class="floating-dots">
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="footer-grid container">
+      <div class="footer-col">
+        <h3>ArtWear</h3>
+        <p>Reimagining personal fashion through intuitive customization tools and sustainable production.</p>
+        <p><i class="fa-solid fa-phone"></i> 9822967088</p>
+        <p><i class="fa-solid fa-envelope"></i> support@artwear.example</p>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <ul class="footer-links">
+          <li><a href="#gallery">Gallery</a></li>
+          <li><a href="career.html">Career</a></li>
+          <li><a href="tel:9822967088">Mobile</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="#app-flow">How We Work</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Working Hours</h4>
+        <ul class="hours">
+          <li>Mon-Fri: 9am - 9pm</li>
+          <li>Sat: 9am - 8pm</li>
+          <li>Sun: Closed</li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Subscription</h4>
+        <p>Subscribe your email for latest news and updates</p>
+        <form id="subscribeForm" class="subscribe-form" novalidate>
+          <input type="email" id="subscribeEmail" placeholder="Enter your email" required />
+          <button type="submit" class="btn primary full">Submit</button>
+          <small class="form-msg" aria-live="polite"></small>
+        </form>
+      </div>
+    </div>
+    <div class="footer-base">&copy; <span id="year"></span> ArtWear. All rights reserved.</div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

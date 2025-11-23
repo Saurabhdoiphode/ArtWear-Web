@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Career | ArtWear</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="logo"><i class="fa-solid fa-shirt"></i><span>ArtWear</span></div>
+    <nav class="main-nav" aria-label="Primary">
+      <button class="nav-toggle" aria-label="Toggle navigation"><span class="bar"></span><span class="bar"></span><span class="bar"></span></button>
+      <ul class="nav-links">
+        <li><a href="index.html#home">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="team.html">Our Team</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="auth-actions">
+      <button class="btn outline small">Sign In</button>
+      <button class="btn primary small">Register</button>
+    </div>
+  </header>
+  <main class="page reveal">
+    <section class="page-hero alt reveal">
+      <h1>Careers</h1>
+      <p class="lead">Join a mission to democratize fashion creativity.</p>
+    </section>
+    <section class="content-block reveal">
+      <h2>Why Work With Us</h2>
+      <p>We combine design tech, sustainability, and global logistics to make custom apparel accessible. You'll collaborate with a diverse team pushing boundaries in visualization, material science, and human-centered tooling.</p>
+      <h2>Open Roles</h2>
+      <ul class="bullet">
+        <li>Frontend Engineer (WebGL / Canvas)</li>
+        <li>Product Designer (UX for creation tools)</li>
+        <li>Supply Chain Analyst</li>
+        <li>Marketing Strategist (Creator Ecosystems)</li>
+      </ul>
+      <p class="apply-note">Send your portfolio or CV to <strong>careers@artwear.example</strong></p>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <div class="footer-grid container">
+      <div class="footer-col">
+        <h3>ArtWear</h3>
+        <p>Reimagining personal fashion through intuitive customization tools and sustainable production.</p>
+        <p><i class="fa-solid fa-phone"></i> 9822967088</p>
+        <p><i class="fa-solid fa-envelope"></i> support@artwear.example</p>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <ul class="footer-links">
+          <li><a href="index.html#gallery">Gallery</a></li>
+          <li><a href="career.html">Career</a></li>
+          <li><a href="tel:9822967088">Mobile</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="index.html#app-flow">How We Work</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Working Hours</h4>
+        <ul class="hours">
+          <li>Mon-Fri: 9am - 9pm</li>
+          <li>Sat: 9am - 8pm</li>
+          <li>Sun: Closed</li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Subscription</h4>
+        <p>Subscribe your email for latest news and updates</p>
+        <form id="subscribeForm" class="subscribe-form" novalidate>
+          <input type="email" id="subscribeEmail" placeholder="Enter your email" required />
+          <button type="submit" class="btn primary full">Submit</button>
+          <small class="form-msg" aria-live="polite"></small>
+        </form>
+      </div>
+    </div>
+    <div class="footer-base">&copy; <span id="year"></span> ArtWear. All rights reserved.</div>
+  </footer>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

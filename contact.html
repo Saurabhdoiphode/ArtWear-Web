@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact | ArtWear</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="logo"><i class="fa-solid fa-shirt"></i><span>ArtWear</span></div>
+    <nav class="main-nav" aria-label="Primary">
+      <button class="nav-toggle" aria-label="Toggle navigation"><span class="bar"></span><span class="bar"></span><span class="bar"></span></button>
+      <ul class="nav-links">
+        <li><a href="index.html#home">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="team.html">Our Team</a></li>
+        <li><a href="contact.html" class="active">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="auth-actions">
+      <button class="btn outline small">Sign In</button>
+      <button class="btn primary small">Register</button>
+    </div>
+  </header>
+  <main class="page contact-page reveal">
+    <section class="contact-wrapper reveal">
+      <div class="contact-left">
+        <h1>Need additional information?</h1>
+        <p>A multifaceted professional skilled in multiple fields of research, development as well as a learning specialist. Over 15 years of experience.</p>
+        <div class="contact-meta">
+          <p><i class="fa-solid fa-phone"></i> 9822967088</p>
+          <p><i class="fa-solid fa-envelope"></i> support@artwear.example</p>
+        </div>
+      </div>
+      <div class="contact-right">
+        <form id="contactForm" novalidate>
+          <div class="form-group">
+            <label for="fullName">Full Name</label>
+            <input type="text" id="fullName" name="fullName" required placeholder="Your full name" />
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required placeholder="you@example.com" />
+          </div>
+          <div class="form-group">
+            <label for="message">Tell us about it *</label>
+            <textarea id="message" name="message" rows="5" required placeholder="Describe your ideas or questions"></textarea>
+          </div>
+          <button type="submit" class="btn primary full">Send Message</button>
+          <small class="form-msg" aria-live="polite"></small>
+        </form>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <div class="footer-grid container">
+      <div class="footer-col">
+        <h3>ArtWear</h3>
+        <p>Reimagining personal fashion through intuitive customization tools and sustainable production.</p>
+        <p><i class="fa-solid fa-phone"></i> 9822967088</p>
+        <p><i class="fa-solid fa-envelope"></i> support@artwear.example</p>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <ul class="footer-links">
+          <li><a href="index.html#gallery">Gallery</a></li>
+          <li><a href="career.html">Career</a></li>
+          <li><a href="tel:9822967088">Mobile</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="index.html#app-flow">How We Work</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Working Hours</h4>
+        <ul class="hours">
+          <li>Mon-Fri: 9am - 9pm</li>
+          <li>Sat: 9am - 8pm</li>
+          <li>Sun: Closed</li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Subscription</h4>
+        <p>Subscribe your email for latest news and updates</p>
+        <form id="subscribeForm" class="subscribe-form" novalidate>
+          <input type="email" id="subscribeEmail" placeholder="Enter your email" required />
+          <button type="submit" class="btn primary full">Submit</button>
+          <small class="form-msg" aria-live="polite"></small>
+        </form>
+      </div>
+    </div>
+    <div class="footer-base">&copy; <span id="year"></span> ArtWear. All rights reserved.</div>
+  </footer>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

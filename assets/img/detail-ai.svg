@@ -1,0 +1,11 @@
+<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 160 120'>
+ <defs>
+  <linearGradient id='dai' x1='0' y1='0' x2='1' y2='1'>
+    <stop offset='0%' stop-color='#54a6ff'/>
+    <stop offset='100%' stop-color='#3563e9'/>
+  </linearGradient>
+ </defs>
+ <rect x='8' y='8' width='144' height='104' rx='20' fill='url(#dai)'/>
+ <circle cx='80' cy='60' r='30' fill='#ffffff' opacity='0.9'/>
+ <path d='M80 40v40M60 60h40' stroke='#3563e9' stroke-width='8' stroke-linecap='round'/>
+</svg>
