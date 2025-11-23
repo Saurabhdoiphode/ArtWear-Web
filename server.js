@@ -19,7 +19,7 @@ const transporter = nodemailer.createTransport({
   service: 'gmail',
   auth: {
     user: 'artwear323@gmail.com',
-    pass: 'ytibsjffmownjkva'
+    pass: 'axzu tjnc apsk abul'
   }
 });
 
@@ -38,9 +38,9 @@ app.post('/subscribe', async (req, res) => {
   if (!mobile) return res.status(400).json({ error: 'Mobile number required' });
   const mailOptions = {
     from: 'artwear323@gmail.com',
-    to: 'artwear323@gmail.com',
+    to: email, // send to the subscriber's email
     subject: 'New Subscription',
-    text: `New subscriber:\nEmail: ${email}\nMobile: ${mobile}`
+    text: `Thank you for subscribing!\nYour details:\nEmail: ${email}\nMobile: ${mobile}`
   };
   try {
     const info = await transporter.sendMail(mailOptions);
@@ -59,9 +59,9 @@ app.post('/contact', async (req, res) => {
   }
   const mailOptions = {
     from: 'artwear323@gmail.com',
-    to: 'artwear323@gmail.com',
-    subject: 'New Contact Form Submission',
-    text: `Contact Form Submission:\nName: ${fullName}\nEmail: ${email}\nMobile: ${mobile}\nMessage: ${message}`
+    to: email, // send to the contact's email
+    subject: 'Thank you for contacting ArtWear',
+    text: `Dear ${fullName},\n\nThank you for reaching out! We have received your message:\n${message}\n\nWe will get back to you soon.\n\nYour details:\nEmail: ${email}\nMobile: ${mobile}`
   };
   try {
     const info = await transporter.sendMail(mailOptions);
