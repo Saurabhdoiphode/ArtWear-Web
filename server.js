@@ -9,8 +9,8 @@ app.use(cors());
 const transporter = nodemailer.createTransport({
   service: 'gmail',
   auth: {
-    user: 'artwear323@gmail.com',
-    pass: 'eydiusvxtyatfolh'
+    user: process.env.GMAIL_USER,
+    pass: process.env.GMAIL_PASS
   }
 });
 
@@ -19,8 +19,8 @@ app.post('/subscribe', async (req, res) => {
   if (!email) return res.status(400).json({ error: 'Email required' });
   if (!mobile) return res.status(400).json({ error: 'Mobile number required' });
   const mailOptions = {
-    from: 'artwear323@gmail.com',
-    to: 'artwear323@gmail.com',
+    from: process.env.GMAIL_USER,
+    to: process.env.GMAIL_USER,
     subject: 'New Subscription',
     text: `New subscriber:\nEmail: ${email}\nMobile: ${mobile}`
   };
@@ -40,8 +40,8 @@ app.post('/contact', async (req, res) => {
     return res.status(400).json({ error: 'All fields required' });
   }
   const mailOptions = {
-    from: 'artwear323@gmail.com',
-    to: 'artwear323@gmail.com',
+    from: process.env.GMAIL_USER,
+    to: process.env.GMAIL_USER,
     subject: 'New Contact Form Submission',
     text: `Contact Form Submission:\nName: ${fullName}\nEmail: ${email}\nMobile: ${mobile}\nMessage: ${message}`
   };
