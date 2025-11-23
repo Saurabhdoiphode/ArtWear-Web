@@ -124,7 +124,7 @@
   // Subscription form validation
   const subscribeForm = document.getElementById('subscribeForm');
   if(subscribeForm){
-    subscribeForm.addEventListener('submit', e => {
+    subscribeForm.addEventListener('submit', async e => {
       e.preventDefault();
       const emailInput = document.getElementById('subscribeEmail');
       const msg = subscribeForm.querySelector('.form-msg');
@@ -135,8 +135,18 @@
         emailInput.focus();
         return;
       }
-      msg.textContent = 'Subscribed successfully!';
-      msg.style.color = '#4ade80';
+      // Send to Node.js backend
+      try {
+        await fetch('http://localhost:3001/subscribe', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ email: emailVal })
+        });
+      } catch (err) {
+        // Ignore error for user experience
+      }
+      alert('You are added in our Discord!');
+      msg.textContent = '';
       emailInput.value='';
     });
   }

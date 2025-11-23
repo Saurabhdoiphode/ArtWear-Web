@@ -15,7 +15,9 @@
   <!-- Loading Overlay -->
   <div id="loader" class="loader-overlay"><div class="spinner"></div></div>
   <header class="site-header">
-    <div class="logo"><i class="fa-solid fa-shirt"></i><span><span class="art-text">Art</span><span class="wear-text">Wear</span></span></div>
+    <div class="logo">
+      <img src="assets/img/logo.png" alt="ArtWear Logo" style="height:70px;width:70px;border-radius:50%;vertical-align:middle;">
+    </div>
     <nav class="main-nav" aria-label="Primary">
       <button class="nav-toggle" aria-label="Toggle navigation"><span class="bar"></span><span class="bar"></span><span class="bar"></span></button>
       <ul class="nav-links">
@@ -92,7 +94,7 @@
   <!-- QUOTE SECTION -->
   <section class="quote reveal">
     <div class="container">
-      <blockquote>"Fashion is the art, and you are the canvas."</blockquote>
+      <blockquote>Fashion is the art, and you are the canvas.</blockquote>
     </div>
   </section>
 
@@ -102,22 +104,22 @@
     <h2 class="section-title">Explore Styles</h2>
     <div class="gallery-row explore-styles">
       <div class="style-card reveal">
-        <div class="style-thumb"><img src="assets/img/style-minimalist.svg" alt="Minimalist style"></div>
+        <div class="style-thumb"><img src="assets/img/mini.png.png" alt="Minimalist style"></div>
         <h3>Minimalist</h3>
         <p>Crisp spacing, restrained color accents and clean lines for timeless versatility.</p>
       </div>
       <div class="style-card reveal">
-        <div class="style-thumb"><img src="assets/img/style-gradient.svg" alt="Gradient style"></div>
+        <div class="style-thumb"><img src="assets/img/gra.png.png" alt="Gradient style"></div>
         <h3>Gradient</h3>
         <p>Smooth multi‑tone fades that add modern depth and subtle motion illusion.</p>
       </div>
       <div class="style-card reveal">
-        <div class="style-thumb"><img src="assets/img/style-patterned.svg" alt="Patterned style"></div>
+        <div class="style-thumb"><img src="assets/img/pat.png.png" alt="Patterned style"></div>
         <h3>Patterned</h3>
         <p>Repeating geometric motifs, layered line work and dual‑color symmetry.</p>
       </div>
       <div class="style-card reveal">
-        <div class="style-thumb"><img src="assets/img/style-abstract.svg" alt="Abstract style"></div>
+        <div class="style-thumb"><img src="assets/img/abs.png.png" alt="Abstract style"></div>
         <h3>Abstract</h3>
         <p>Experimental shapes & overlapping forms for bold, art‑driven statement pieces.</p>
       </div>
@@ -130,9 +132,9 @@
     <div class="container">
       <div class="detail-wrapper reveal">
         <div class="detail-showcase">
-          <div class="detail-shot"><img src="assets/img/detail-eco.svg" alt="Eco materials"></div>
-          <div class="detail-shot"><img src="assets/img/detail-ai.svg" alt="AI layout engine"></div>
-          <div class="detail-shot"><img src="assets/img/detail-global.svg" alt="Global fulfillment"></div>
+          <div class="detail-shot"><img src="assets/img/tshirt2.png.png" alt="Eco materials"></div>
+          <div class="detail-shot"><img src="assets/img/tshirt3.png.png" alt="AI layout engine"></div>
+          <div class="detail-shot"><img src="assets/img/tshirt4.png.png" alt="Global fulfillment"></div>
         </div>
         <h2>Detailed Information About Service</h2>
         <p>ArtWear streamlines apparel customization with an immersive 360° preview engine, smart color harmonies, and AI suggestions for layouts. We prioritize sustainable materials and efficient production pipelines—ensuring your designs look great and feel responsible.</p>
@@ -149,25 +151,48 @@
   <!-- FEATURED STYLES SECTION (like popular cars) -->
   <section class="featured reveal">
     <div class="container">
-      <h2 class="section-title">Featured Custom Styles</h2>
+      <div class="featured-header">
+        <h2 class="section-title">Featured Custom Styles</h2>
+        <p class="section-subtitle">Explore our trending designs crafted by artists and loved by customers worldwide</p>
+      </div>
       <div class="featured-grid">
-        <div class="featured-card reveal">
-          <span class="badge">TRENDING</span>
+        <div class="featured-card reveal" data-style="trending">
+          <div class="card-badge-wrapper">
+            <span class="badge badge-trending"><i class="fa-solid fa-fire"></i> TRENDING</span>
+          </div>
+          <div class="card-icon">
+            <i class="fa-solid fa-bolt"></i>
+          </div>
           <h3>Neon Edge Tee</h3>
           <p>Electric gradients & luminous ink effects.</p>
         </div>
-        <div class="featured-card reveal">
-          <span class="badge">LIMITED</span>
+        <div class="featured-card reveal" data-style="limited">
+          <div class="card-badge-wrapper">
+            <span class="badge badge-limited"><i class="fa-solid fa-clock"></i> LIMITED</span>
+          </div>
+          <div class="card-icon">
+            <i class="fa-solid fa-leaf"></i>
+          </div>
           <h3>Eco Minimal</h3>
           <p>Organic cotton & subtle linework art.</p>
         </div>
-        <div class="featured-card reveal">
-          <span class="badge">POPULAR</span>
+        <div class="featured-card reveal" data-style="popular">
+          <div class="card-badge-wrapper">
+            <span class="badge badge-popular"><i class="fa-solid fa-star"></i> POPULAR</span>
+          </div>
+          <div class="card-icon">
+            <i class="fa-solid fa-city"></i>
+          </div>
           <h3>Street Pattern</h3>
           <p>Urban motifs with layered texture overlays.</p>
         </div>
-        <div class="featured-card reveal">
-          <span class="badge">NEW</span>
+        <div class="featured-card reveal" data-style="new">
+          <div class="card-badge-wrapper">
+            <span class="badge badge-new"><i class="fa-solid fa-sparkles"></i> NEW</span>
+          </div>
+          <div class="card-icon">
+            <i class="fa-solid fa-wand-magic-sparkles"></i>
+          </div>
           <h3>Chromatic Pulse</h3>
           <p>Pulsing color bands & dynamic geometric forms.</p>
         </div>
@@ -184,10 +209,34 @@
           <p>We fuse creativity tooling, sustainable sourcing, and rapid fulfillment into one cohesive experience. ArtWear lets you iterate confidently and wear ideas faster than traditional custom print shops.</p>
         </div>
         <ul class="why-points">
-          <li class="reveal"><i class="fa-solid fa-seedling"></i><div><strong>Eco Materials</strong><span>Certified organic fabrics & water-based inks.</span></div></li>
-          <li class="reveal"><i class="fa-solid fa-wand-magic-sparkles"></i><div><strong>Smart Suggestions</strong><span>AI assists with layout balance & palette harmony.</span></div></li>
-          <li class="reveal"><i class="fa-solid fa-globe"></i><div><strong>Global Fulfillment</strong><span>Nearest responsible facility reduces carbon footprint.</span></div></li>
-          <li class="reveal"><i class="fa-solid fa-gauge-high"></i><div><strong>Fast Iteration</strong><span>Real-time 360° preview—no waiting for proofs.</span></div></li>
+          <li class="reveal">
+            <i class="fa-solid fa-seedling"></i>
+            <div>
+              <strong>Eco Materials</strong>
+              <span>Certified organic fabrics & water-based inks.</span>
+            </div>
+          </li>
+          <li class="reveal">
+            <i class="fa-solid fa-wand-magic-sparkles"></i>
+            <div>
+              <strong>Smart Suggestions</strong>
+              <span>AI assists with layout balance & palette harmony.</span>
+            </div>
+          </li>
+          <li class="reveal">
+            <i class="fa-solid fa-globe"></i>
+            <div>
+              <strong>Global Fulfillment</strong>
+              <span>Nearest responsible facility reduces carbon footprint.</span>
+            </div>
+          </li>
+          <li class="reveal">
+            <i class="fa-solid fa-gauge-high"></i>
+            <div>
+              <strong>Fast Iteration</strong>
+              <span>Real-time 360° preview—no waiting for proofs.</span>
+            </div>
+          </li>
         </ul>
       </div>
     </div>
@@ -236,6 +285,9 @@
         <div class="app-visual reveal">
           <div class="phone-mockup">
             <img src="assets/img/app-mockup.svg" alt="ArtWear mobile app interface">
+            <div class="tshirt-preview">
+              <img src="assets/img/tshirt.png" alt="360° T-shirt preview" class="rotating-tshirt">
+            </div>
           </div>
           <div class="decorative-arc"></div>
           <div class="floating-dots">
@@ -256,8 +308,8 @@
       <div class="footer-col">
         <h3>ArtWear</h3>
         <p>Reimagining personal fashion through intuitive customization tools and sustainable production.</p>
-        <p><i class="fa-solid fa-phone"></i> 9822967088</p>
-        <p><i class="fa-solid fa-envelope"></i> support@artwear.example</p>
+        <p><i class="fa-solid fa-phone"></i> +919822967088</p>
+        <p><i class="fa-solid fa-envelope"></i> artwear323@gmail.com</p>
       </div>
       <div class="footer-col">
         <h4>Company</h4>
