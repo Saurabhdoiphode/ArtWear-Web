@@ -127,12 +127,20 @@
     subscribeForm.addEventListener('submit', async e => {
       e.preventDefault();
       const emailInput = document.getElementById('subscribeEmail');
+      const mobileInput = document.getElementById('subscribeMobile');
       const msg = subscribeForm.querySelector('.form-msg');
       const emailVal = emailInput.value.trim();
+      const mobileVal = mobileInput.value.trim();
       if(!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(emailVal)){
         msg.textContent = 'Please enter a valid email.';
         msg.style.color = '#ff6b6b';
         emailInput.focus();
+        return;
+      }
+      if(!/^\+?[0-9]{10,15}$/.test(mobileVal)){
+        msg.textContent = 'Please enter a valid mobile number.';
+        msg.style.color = '#ff6b6b';
+        mobileInput.focus();
         return;
       }
       // Send to Node.js backend
@@ -140,7 +148,7 @@
         await fetch('http://localhost:3001/subscribe', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ email: emailVal })
+          body: JSON.stringify({ email: emailVal, mobile: mobileVal })
         });
       } catch (err) {
         // Ignore error for user experience
@@ -148,16 +156,18 @@
       alert('You are added in our Discord!');
       msg.textContent = '';
       emailInput.value='';
+      mobileInput.value='';
     });
   }
 
   // Contact form validation
   const contactForm = document.getElementById('contactForm');
   if(contactForm){
-    contactForm.addEventListener('submit', e => {
+    contactForm.addEventListener('submit', async e => {
       e.preventDefault();
       const fullName = contactForm.fullName.value.trim();
       const email = contactForm.email.value.trim();
+      const mobile = contactForm.mobile.value.trim();
       const message = contactForm.message.value.trim();
       const msgEl = contactForm.querySelector('.form-msg');
       if(fullName.length < 2){
@@ -172,15 +182,32 @@
         contactForm.email.focus();
         return;
       }
+      if(!/^\+?[0-9]{10,15}$/.test(mobile)){
+        msgEl.textContent = 'Please enter a valid mobile number.';
+        msgEl.style.color = '#ff6b6b';
+        contactForm.mobile.focus();
+        return;
+      }
       if(message.length < 10){
         msgEl.textContent = 'Message should be at least 10 characters.';
         msgEl.style.color = '#ff6b6b';
         contactForm.message.focus();
         return;
       }
-      msgEl.textContent = 'Message sent! We will respond soon.';
-      msgEl.style.color = '#4ade80';
-      contactForm.reset();
+      // Send to Node.js backend
+      try {
+        await fetch('http://localhost:3001/contact', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ fullName, email, mobile, message })
+        });
+        msgEl.textContent = 'Message sent! We will respond soon.';
+        msgEl.style.color = '#4ade80';
+        contactForm.reset();
+      } catch (err) {
+        msgEl.textContent = 'Failed to send message.';
+        msgEl.style.color = '#ff6b6b';
+      }
     });
   }
 

@@ -37,11 +37,11 @@
         <div class="contact-meta" style="display: flex; flex-direction: column; gap: 0.7rem; margin-top: 0.5rem;">
           <div style="display: flex; align-items: center; gap: 0.7rem; font-size: 1.1rem;">
             <i class="fa-solid fa-phone"></i>
-            <span>+919822967088</span>
+            <a href="tel:+919822967088">+919822967088</a>
           </div>
           <div style="display: flex; align-items: center; gap: 0.7rem; font-size: 1.1rem;">
             <i class="fa-solid fa-envelope"></i>
-            <span>support@artwear.example</span>
+            <a href="mailto:artwear323@gmail.com">artwear323@gmail.com</a>
           </div>
         </div>
       </div>
@@ -54,6 +54,10 @@
           <div class="form-group">
             <label for="email">Email</label>
             <input type="email" id="email" name="email" required placeholder="you@example.com" />
+          </div>
+          <div class="form-group">
+            <label for="mobile">Mobile Number</label>
+            <input type="text" id="mobile" name="mobile" required placeholder="Your mobile number" pattern="[+]?[0-9]{10,15}" />
           </div>
           <div class="form-group">
             <label for="message">Tell us about it *</label>
@@ -70,8 +74,8 @@
       <div class="footer-col">
         <h3>ArtWear</h3>
         <p>Reimagining personal fashion through intuitive customization tools and sustainable production.</p>
-        <p><i class="fa-solid fa-phone"></i> +919822967088</p>
-        <p><i class="fa-solid fa-envelope"></i> support@artwear.example</p>
+        <p><i class="fa-solid fa-phone"></i> <a href="tel:+919822967088">+919822967088</a></p>
+        <p><i class="fa-solid fa-envelope"></i> <a href="mailto:artwear323@gmail.com">artwear323@gmail.com</a></p>
       </div>
       <div class="footer-col">
         <h4>Company</h4>
@@ -96,6 +100,7 @@
         <p>Subscribe your email for latest news and updates</p>
         <form id="subscribeForm" class="subscribe-form" novalidate>
           <input type="email" id="subscribeEmail" placeholder="Enter your email" required />
+          <input type="text" id="subscribeMobile" placeholder="Enter your mobile number" pattern="[+]?[0-9]{10,15}" required style="margin-top:10px;" />
           <button type="submit" class="btn primary full">Submit</button>
           <small class="form-msg" aria-live="polite"></small>
         </form>

@@ -45,7 +45,7 @@
         </div>
       </div>
       <div class="hero-visual reveal">
-        <div class="tshirt-wrapper">
+        <div class="tshirt-wrapper" style="transform: translateX(120px); transition: transform 0.5s;">
           <div class="tshirt-3d" id="tshirt3dImage">
             <img src="assets/img/tshirt.png" alt="Custom T-shirt" class="shirt-image" />
           </div>
@@ -148,57 +148,6 @@
     </div>
   </section>
 
-  <!-- FEATURED STYLES SECTION (like popular cars) -->
-  <section class="featured reveal">
-    <div class="container">
-      <div class="featured-header">
-        <h2 class="section-title">Featured Custom Styles</h2>
-        <p class="section-subtitle">Explore our trending designs crafted by artists and loved by customers worldwide</p>
-      </div>
-      <div class="featured-grid">
-        <div class="featured-card reveal" data-style="trending">
-          <div class="card-badge-wrapper">
-            <span class="badge badge-trending"><i class="fa-solid fa-fire"></i> TRENDING</span>
-          </div>
-          <div class="card-icon">
-            <i class="fa-solid fa-bolt"></i>
-          </div>
-          <h3>Neon Edge Tee</h3>
-          <p>Electric gradients & luminous ink effects.</p>
-        </div>
-        <div class="featured-card reveal" data-style="limited">
-          <div class="card-badge-wrapper">
-            <span class="badge badge-limited"><i class="fa-solid fa-clock"></i> LIMITED</span>
-          </div>
-          <div class="card-icon">
-            <i class="fa-solid fa-leaf"></i>
-          </div>
-          <h3>Eco Minimal</h3>
-          <p>Organic cotton & subtle linework art.</p>
-        </div>
-        <div class="featured-card reveal" data-style="popular">
-          <div class="card-badge-wrapper">
-            <span class="badge badge-popular"><i class="fa-solid fa-star"></i> POPULAR</span>
-          </div>
-          <div class="card-icon">
-            <i class="fa-solid fa-city"></i>
-          </div>
-          <h3>Street Pattern</h3>
-          <p>Urban motifs with layered texture overlays.</p>
-        </div>
-        <div class="featured-card reveal" data-style="new">
-          <div class="card-badge-wrapper">
-            <span class="badge badge-new"><i class="fa-solid fa-sparkles"></i> NEW</span>
-          </div>
-          <div class="card-icon">
-            <i class="fa-solid fa-wand-magic-sparkles"></i>
-          </div>
-          <h3>Chromatic Pulse</h3>
-          <p>Pulsing color bands & dynamic geometric forms.</p>
-        </div>
-      </div>
-    </div>
-  </section>
 
   <!-- WHY CHOOSE SECTION -->
   <section class="why reveal">
@@ -308,8 +257,8 @@
       <div class="footer-col">
         <h3>ArtWear</h3>
         <p>Reimagining personal fashion through intuitive customization tools and sustainable production.</p>
-        <p><i class="fa-solid fa-phone"></i> +919822967088</p>
-        <p><i class="fa-solid fa-envelope"></i> artwear323@gmail.com</p>
+        <p><i class="fa-solid fa-phone"></i> <a href="tel:+919822967088">+919822967088</a></p>
+        <p><i class="fa-solid fa-envelope"></i> <a href="mailto:artwear323@gmail.com">artwear323@gmail.com</a></p>
       </div>
       <div class="footer-col">
         <h4>Company</h4>
@@ -334,6 +283,7 @@
         <p>Subscribe your email for latest news and updates</p>
         <form id="subscribeForm" class="subscribe-form" novalidate>
           <input type="email" id="subscribeEmail" placeholder="Enter your email" required />
+          <input type="text" id="subscribeMobile" placeholder="Enter your mobile number" pattern="[+]?[0-9]{10,15}" required style="margin-top:10px;" />
           <button type="submit" class="btn primary full">Submit</button>
           <small class="form-msg" aria-live="polite"></small>
         </form>
