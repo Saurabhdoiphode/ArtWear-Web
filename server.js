@@ -23,6 +23,15 @@ const transporter = nodemailer.createTransport({
   }
 });
 
+// Test transporter on startup
+transporter.verify(function(error, success) {
+  if (error) {
+    console.error('Nodemailer transporter error:', error);
+  } else {
+    console.log('Nodemailer transporter is ready to send emails');
+  }
+});
+
 app.post('/subscribe', async (req, res) => {
   const { email, mobile } = req.body;
   if (!email) return res.status(400).json({ error: 'Email required' });
@@ -35,11 +44,11 @@ app.post('/subscribe', async (req, res) => {
   };
   try {
     const info = await transporter.sendMail(mailOptions);
-    console.log('Email sent:', info.response);
+    console.log('Subscription email sent:', info.response);
     res.json({ success: true });
   } catch (err) {
-    console.error('Email send error:', err);
-    res.status(500).json({ error: 'Failed to send email', details: err.message });
+    console.error('Subscription email error:', err);
+    res.status(500).json({ error: 'Failed to send subscription email', details: err.message });
   }
 });
 
@@ -64,5 +73,5 @@ app.post('/contact', async (req, res) => {
   }
 });
 
-const PORT = process.env.PORT || 3001;
+const PORT = process.env.PORT || 10000;
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
