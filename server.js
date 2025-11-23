@@ -1,5 +1,5 @@
 const express = require('express');
-const nodemailer = require('nodemailer');
+const sgMail = require('@sendgrid/mail');
 const cors = require('cors');
 const path = require('path');
 
@@ -15,39 +15,25 @@ app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, 'index.html'));
 });
 
-const transporter = nodemailer.createTransport({
-  service: 'gmail',
-  auth: {
-    user: 'artwear323@gmail.com',
-    pass: 'axzu tjnc apsk abul'
-  }
-});
-
-// Test transporter on startup
-transporter.verify(function(error, success) {
-  if (error) {
-    console.error('Nodemailer transporter error:', error);
-  } else {
-    console.log('Nodemailer transporter is ready to send emails');
-  }
-});
+// Set your SendGrid API key from environment variable
+sgMail.setApiKey(process.env.SENDGRID_API_KEY);
 
 app.post('/subscribe', async (req, res) => {
   const { email, mobile } = req.body;
   if (!email) return res.status(400).json({ error: 'Email required' });
   if (!mobile) return res.status(400).json({ error: 'Mobile number required' });
-  const mailOptions = {
-    from: 'artwear323@gmail.com',
-    to: email, // send to the subscriber's email
+  const msg = {
+    to: email,
+    from: 'artwear323@gmail.com', // Use a verified sender email in SendGrid
     subject: 'New Subscription',
-    text: `Thank you for subscribing!\nYour details:\nEmail: ${email}\nMobile: ${mobile}`
+    text: `Thank you for subscribing!\nYour details:\nEmail: ${email}\nMobile: ${mobile}`,
   };
   try {
-    const info = await transporter.sendMail(mailOptions);
-    console.log('Subscription email sent:', info.response);
+    await sgMail.send(msg);
+    console.log('Subscription email sent via SendGrid');
     res.json({ success: true });
   } catch (err) {
-    console.error('Subscription email error:', err);
+    console.error('SendGrid error:', err);
     res.status(500).json({ error: 'Failed to send subscription email', details: err.message });
   }
 });
@@ -57,18 +43,18 @@ app.post('/contact', async (req, res) => {
   if (!fullName || !email || !mobile || !message) {
     return res.status(400).json({ error: 'All fields required' });
   }
-  const mailOptions = {
-    from: 'artwear323@gmail.com',
-    to: email, // send to the contact's email
+  const msg = {
+    to: email,
+    from: 'artwear323@gmail.com', // Use a verified sender email in SendGrid
     subject: 'Thank you for contacting ArtWear',
-    text: `Dear ${fullName},\n\nThank you for reaching out! We have received your message:\n${message}\n\nWe will get back to you soon.\n\nYour details:\nEmail: ${email}\nMobile: ${mobile}`
+    text: `Dear ${fullName},\n\nThank you for reaching out! We have received your message:\n${message}\n\nWe will get back to you soon.\n\nYour details:\nEmail: ${email}\nMobile: ${mobile}`,
   };
   try {
-    const info = await transporter.sendMail(mailOptions);
-    console.log('Contact form email sent:', info.response);
+    await sgMail.send(msg);
+    console.log('Contact form email sent via SendGrid');
     res.json({ success: true });
   } catch (err) {
-    console.error('Contact form email error:', err);
+    console.error('SendGrid error:', err);
     res.status(500).json({ error: 'Failed to send contact form email', details: err.message });
   }
 });
