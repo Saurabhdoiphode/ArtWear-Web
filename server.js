@@ -28,8 +28,8 @@ app.post('/subscribe', async (req, res) => {
   if (!email) return res.status(400).json({ error: 'Email required' });
   if (!mobile) return res.status(400).json({ error: 'Mobile number required' });
   const mailOptions = {
-    from: process.env.GMAIL_USER,
-    to: process.env.GMAIL_USER,
+    from: 'artwear323@gmail.com',
+    to: 'artwear323@gmail.com',
     subject: 'New Subscription',
     text: `New subscriber:\nEmail: ${email}\nMobile: ${mobile}`
   };
@@ -49,8 +49,8 @@ app.post('/contact', async (req, res) => {
     return res.status(400).json({ error: 'All fields required' });
   }
   const mailOptions = {
-    from: process.env.GMAIL_USER,
-    to: process.env.GMAIL_USER,
+    from: 'artwear323@gmail.com',
+    to: 'artwear323@gmail.com',
     subject: 'New Contact Form Submission',
     text: `Contact Form Submission:\nName: ${fullName}\nEmail: ${email}\nMobile: ${mobile}\nMessage: ${message}`
   };
