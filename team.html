@@ -9,6 +9,19 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
   <link rel="stylesheet" href="assets/css/style.css?v=20251124-01" />
+  <style>
+    /* Critical hero layout overrides (inline fallback) */
+    .hero-grid{display:flex;align-items:center;justify-content:center;gap:20px;}
+    .hero-content, .hero-visual{flex:0 0 50%;max-width:50%;}
+    .tshirt-wrapper{transform:translateX(120px) !important;}
+    .shirt-image{max-width:100% !important;height:auto !important;display:block;margin:0 auto;}
+    @media (max-width:600px){
+      .hero-grid{flex-direction:row !important;padding:12px !important;}
+      .hero-content{order:1;padding-right:8px !important;width:50% !important;}
+      .hero-visual{order:2;padding-left:8px !important;width:50% !important;}
+      .tshirt-wrapper{transform:translateX(80px) !important}
+    }
+  </style>
 </head>
 <body>
   <header class="site-header">
