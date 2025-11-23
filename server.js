@@ -1,4 +1,3 @@
-
 const express = require('express');
 const nodemailer = require('nodemailer');
 const cors = require('cors');
@@ -19,8 +18,8 @@ app.get('/', (req, res) => {
 const transporter = nodemailer.createTransport({
   service: 'gmail',
   auth: {
-    user: process.env.GMAIL_USER,
-    pass: process.env.GMAIL_PASS
+    user: 'artwear323@gmail.com',
+    pass: 'ytibsjffmownjkva'
   }
 });
 
